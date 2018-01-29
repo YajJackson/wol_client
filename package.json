@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./node_modules/http-server/bin/http-server"
+    "start": "node ./node_modules/http-server/bin/http-server"
   },
   "author": "Jay Jackson",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.11.1",
-    "nodemon": "^1.14.11"
+    "http-server": "^0.11.1"
   }
 }
