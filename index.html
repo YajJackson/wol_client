@@ -3,16 +3,69 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
-  <title>Document</title>
+  <title>Workout</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col">
-          <nav class="navbar navbar-dark bg-dark">
-            <h2 class="white-font">Workout Log</h2>
-            <button class="btn btn-outline-success" id="test-button">Test Api</button>
-          </nav>
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+          <h2 class="navbar-brand text-white">WorkoutLog</h2>
+          <form class="form-inline">
+            <button class="btn btn-outline-info" id="test-button">Test Api</button>
+            
+          </form>
+        </nav>
+      </div>
+    </div>
+    <div class="row" id="login-row">
+      <div class="col"></div>
+      <div class="col">
+        <div class="card text-white bg-dark mb-3">
+          <div class="card-body">
+            <h4 class="card-title">Welcome!</h4>
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#signupModal" id="signup-button">Signup</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#signinModal" id="signin-button">Signin</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+  
+<!-- Signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content bg-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Sign up!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id='signup-form'>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Username" required id='signup-input-username'>
+                </div>
+                <div class="col">
+                  <input type="password" class="form-control" placeholder="Password" required id='signup-input-password'>
+                </div>
+              </div>
+              <div class="row submit-button-row">
+                <div class="col">
+                  <button class="btn btn-outline-success btn-block" id="signup-form-button">submit</button>
+                </div>
+              </div>
+            </form>
+        </div>
       </div>
     </div>
   </div>
