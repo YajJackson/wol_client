@@ -1,14 +1,22 @@
-.btn {
-  border-radius: 0px;
+.container-fluid {
+  padding: 0px;
+  overflow: hidden;
 }
-
 .navbar {
   padding: 0px 5px;
 }
-
+.btn {
+  border-radius: 0px;
+}
 .submit-button-row {
   margin-top: 5%;
 }
 #login-row {
-  margin-top: 10%;
+  margin-top: 20%;
+}
+#shoe-button-row {
+  margin-top: 2%;
+}
+#image-input-row {
+  margin-top: 2%;
 }

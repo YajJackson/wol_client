@@ -3,7 +3,7 @@ $(()=> {
     $.get('http://localhost:3000/api/test').done((res) => alert(res))
   )
 
-  $('#signup-form').submit((e) => {
+  $('#signup-form').submit(e => {
     e.preventDefault()
     $.post(
       'http://localhost:3000/api/user/signup',
@@ -14,8 +14,31 @@ $(()=> {
         }
       }
     ).then(
-      (data) => {console.log(JSON.parse(data))}, 
-      (err) => {console.log(err)}
+      data => {
+        console.log(data)
+        $('#signupModal').modal('hide')
+      }, 
+      err => console.log(err)
+    )
+  })
+
+  $('#shoe-form').submit(e => {
+    e.preventDefault()
+    $.post(
+      'http://localhost:3000/api/shoe',
+      {
+        shoe:{
+          type: $('#shoe-input-type').val(),
+          name: $('#shoe-input-name').val(),
+          url: $('#shoe-input-url').val()
+        }
+      }
+    ).then(
+      data => {
+        console.log(data)
+        $('#shoeModal').modal('hide')
+      },
+      err => console.log(err)
     )
   })
 })
